@@ -18,8 +18,27 @@ body nav a{
     color: rgb(167, 164, 164);
     padding: 10px 20px;
     transition: 0.5s;
+    position: relative;
 }
 
 body nav a:hover{
     color: #0ef;
+}
+
+nav a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid aqua;
+    border-radius: 10px;
+    transform: scale(0) translateY(50px);
+    transition: 0.5s;
+}
+
+nav a:hover span{
+    transform: scale(1) translateY(0);
+    border-color: lightsalmon;
 }
